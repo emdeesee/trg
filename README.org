@@ -2,4 +2,7 @@
 ** Prerequisites
 The GUI library, ltk, used by trg expects tk to be installed.
 ** Usage
+In the trg directory:
+#+BEGIN_SRC
 $ sbcl --load "trg" --eval "(progn (main) (sb-ext:exit))"
+#+END_SRC
