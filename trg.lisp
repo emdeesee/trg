@@ -68,12 +68,9 @@
 
 (defun main ()
   (ltk:with-ltk ()
-    (let* ((sc (make-instance 'ltk:scrolled-canvas))
-           (c (ltk:canvas sc)))
-      (ltk:configure c :background "black")
-      (ltk:pack sc :expand 1 :fill :both)
-      (ltk:scrollregion c 0 0 *canvas-dim* *canvas-dim*)
+    (let ((c (make-instance 'ltk:canvas
+                            :background "black")))
       (ltk:format-wish "wm geometry . \"~ax~a\"" *canvas-dim* *canvas-dim*)
-      ;; mark triangle vertices
+      (ltk:pack c :expand 1 :fill :both)
       (dolist (v *vertices*) (render-point c v))
       (loop do (update-points c (get-next-point))))))
