@@ -15,8 +15,8 @@
 
 (ql:quickload :ltk)
 
-(defparameter *length* 500)
-(defparameter *canvas-dim* 800)
+(defparameter *length* 512)
+(defparameter *canvas-dim* 640)
 
 (defun sqr (x) (* x x))
 
@@ -70,7 +70,7 @@
           (nbutlast points)))))
 
 (defun choose-color ()
-  (rand-nth '("cyan4" "cyan3" "cyan2")))
+  (rand-nth '("cyan1" "cyan2" "cyan3")))
 
 (defun render-point (canvas p)
   (destructuring-bind (x y) p
