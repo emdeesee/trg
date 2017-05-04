@@ -1,0 +1,5 @@
+* trg - a pleasant Sierpinski gasket display
+** Prerequisites
+The GUI library, ltk, used by trg expects tk to be installed.
+** Usage
+$ sbcl --load "trg" --eval "(progn (main) (sb-ext:exit))"
