@@ -13,7 +13,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(ql:quickload :ltk)
+(in-package :trg)
 
 (defparameter *length* 512)
 (defparameter *canvas-dim* 640)
@@ -61,7 +61,7 @@
 
 (let ((points)
       (count 0)
-      (max 4096))
+      (max 8192))
   (defun retain-index (canvas i)
     (push i points)
     (if (< count max) (incf count)

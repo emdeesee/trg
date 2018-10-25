@@ -2,7 +2,10 @@
 ** Prerequisites
 The GUI library, ltk, used by trg expects tk to be installed.
 ** Usage
-In the trg directory:
+Using [[https://www.quicklisp.org/beta/][Quicklisp]], clone trg into ~/quicklisp/local-projects/, then:
+
 #+BEGIN_SRC
-$ sbcl --load "trg" --eval "(progn (main) (sb-ext:exit))"
+> (ql:quickload :trg)
+... stuff happens
+> (trg:main)
 #+END_SRC
